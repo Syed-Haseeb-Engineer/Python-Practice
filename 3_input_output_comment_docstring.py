@@ -36,4 +36,7 @@ print(f"Estimated Birth Year: {calculated_year}")
 
 #How to view a Docstring in code!
 #The __doc__ attribute lets us print the manual for our function directly.
+print("\n--- Function Documentation ---")
 print(calculate_birth_year.__doc__)
+
+# %%
