@@ -8,6 +8,7 @@ for num in range(1, 6):
 pythonic_squares = [num * num for num in range(1, 6)]
 print(f"List Comprehension: {pythonic_squares}")
 
+
 even_squares = [num * num for num in range(1 ,6) if num % 2 == 0]
 print(f"Filtered List comprehension: {even_squares}")
 
