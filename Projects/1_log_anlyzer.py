@@ -15,3 +15,4 @@ issues_lenghts = {issue: len(issue) for issue in unique_issues}
 print("\n--- Final Analysis ---")
 for issue, length in issues_lenghts.items():
     print(f"Issue: '{issue}' | Char Length: {length}")
+    
