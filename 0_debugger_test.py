@@ -1,3 +1,4 @@
+# %%
 def calculate_compund_interest(principal, rate, years):
     """Calculates interest over time to practice debugging."""
     current_amount = principal
@@ -12,12 +13,17 @@ def calculate_compund_interest(principal, rate, years):
 final_balance = calculate_compund_interest(1000.0, 0.05, 3)
 print(f"\nFinal Balance: ${final_balance:.2f}")
 
-# import time
-# print("Starting the sysmte check..")
 
-# for i in range(1,4):
-#     status = f"Cheecking core{i}.."
-#     print(status)
-#     time.sleep(0.5)
 
-# print("System check complete!")
+
+#%%
+import time
+print("Starting the sysmte check..")
+
+for i in range(1,4):
+    status = f"Cheecking core{i}.."
+    print(status)
+    time.sleep(0.5) #(0.5) means half second, if (1) means 1 second
+
+print("System check complete!")
+# %%
