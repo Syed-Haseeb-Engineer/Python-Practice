@@ -5,6 +5,9 @@ if True:
     print("This line is inside the 'if' block")
 
 print("This line is outside ther 'if' block, back at the normal level.")
+print('Hello', 1, 4.5, True, sep= '/') # sep is use to replace space which comes by default
+print('hello', end = '-')
+print('hello')
 
 #%%
 user_age = 25
