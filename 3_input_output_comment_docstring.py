@@ -40,3 +40,53 @@ print("\n--- Function Documentation ---")
 print(calculate_birth_year.__doc__)
 
 # %%
+#Operators
+# integer operatos
+print(11//2)
+print(11/2)
+
+
+#bitwise operators (it performce on bit level)
+
+
+#bitwise AND
+print(2 & 3)
+#Binary number for 2 =         10
+#Binary number for 3 =         11 
+#Binray number for result(2) = 10
+
+#bitwise OR
+print(2 | 3)
+#Binary number for 2 =         10
+#Binary number for 3 =         11 
+#Binray number for result(3) = 11
+
+#bitwise XOR (if both numbers are same then 0 if not 1)
+print(2 ^ 3) 
+#Binary number for 2 =         10
+#Binary number for 3 =         11 
+#Binray number for result(3) = 01
+
+#bitwise NOT
+print(~3)
+#Binary number for 3 = 11
+#Binary number for result = 
+
+
+#Membership operator
+print('D' in 'Delhi')
+print('D' not in 'Delhi')
+
+
+# %%
+#WAP to take input from user as 3 digit and sum the given digits
+number = int(input('Enter 3 digit number'))
+Result = 0
+
+while number > 0:
+    Result += number % 10
+    number = number//10
+
+
+print(Result)
+# %%
