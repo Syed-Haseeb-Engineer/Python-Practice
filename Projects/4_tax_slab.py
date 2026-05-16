@@ -8,39 +8,56 @@
 #20 - 24 : 25%
 #Above 24 : 30%
 
-CTC = int(input("Enter your CTC"))
-HRA = CTC * 0.1
-DA = CTC * 0.05
-PF = CTC * 0.03
-others = HRA + DA + PF
-Tax = 0  
 
 
-if CTC <= 4:
-    Tax = CTC * 0
-    salary = CTC - HRA - DA - PF - Tax
-    print((salary/12)* 100000)
-elif CTC > 4 and CTC <=8:
-    Tax = (CTC-4) * 0.05
-    salary = CTC - HRA - DA - PF - Tax
-    print((salary/12)* 100000)
-elif CTC > 8 and CTC <=12:
-     Tax = ((CTC - 8) * 0.1) + 4 * 0.05
-     salary = CTC - HRA - DA - PF - Tax
-     print((salary/12)* 100000)
-elif CTC > 12 and CTC <=16:
-    Tax = ((CTC - 12) * 0.15) + 4 * 0.05 + 4 * 0.1
-    salary = CTC - HRA - DA - PF - Tax
-    print((salary/12)* 100000)
-elif CTC > 16 and CTC <=20:
-    Tax = ((CTC - 16) * 0.2) + 4 * 0.05 + 4 * 0.1 + 4 * 0.15
-    salary = CTC - HRA - DA - PF - Tax
-    print((salary/12)* 100000)
-elif CTC > 20 and CTC <=24:
-    Tax = ((CTC - 20) * 0.25) + 4 * 0.05 + 4 * 0.1 + 4 * 0.15 + 4 * 0.2
-    salary = CTC - HRA - DA - PF - Tax
-    print((salary/12)* 100000)
-else:
-    Tax = ((CTC - 24) * 0.3) + 4 * 0.05 + 4 * 0.1 + 4 * 0.15 + 4 * 0.2 + 4 * 0.25
-    salary = CTC - HRA - DA - PF - Tax
-    print((salary/12)* 100000)
+while True:
+    CTC = int(input("Enter your CTC"))
+    HRA = CTC * 0.1
+    DA = CTC * 0.05
+    PF = CTC * 0.03
+    others = HRA + DA + PF
+    Tax = 0  
+
+    
+    if CTC <= 4:
+        Tax = CTC * 0
+        salary = CTC - HRA - DA - PF - Tax
+        print(f"Monthly Cash in hand",(salary/12)* 100000)
+        print(f"The Total Annual Salary :",(salary*100000))
+        print(f"The All deductions :", (CTC - salary))
+    elif CTC > 4 and CTC <=8:
+        Tax = (CTC-4) * 0.05
+        salary = CTC - HRA - DA - PF - Tax
+        print(f"Monthly Cash in hand",(salary/12)* 100000)
+        print(f"The Total Annual Salary :",(salary*100000))
+        print(f"The All deductions :", (CTC - salary))
+    elif CTC > 8 and CTC <=12:
+         Tax = ((CTC - 8) * 0.1) + 4 * 0.05
+         salary = CTC - HRA - DA - PF - Tax
+         print(f"Monthly Cash in hand :",(salary/12)* 100000)
+         print(f"The Total Annual Salary :",(salary*100000))
+         print(f"The All deductions :", (CTC - salary))
+    elif CTC > 12 and CTC <=16:
+        Tax = ((CTC - 12) * 0.15) + 4 * 0.05 + 4 * 0.1
+        salary = CTC - HRA - DA - PF - Tax
+        print(f"Monthly Cash in hand",(salary/12)* 100000)
+        print(f"The Total Annual Salary :",(salary*100000))
+        print(f"The All deductions :", (CTC - salary))
+    elif CTC > 16 and CTC <=20:
+        Tax = ((CTC - 16) * 0.2) + 4 * 0.05 + 4 * 0.1 + 4 * 0.15
+        salary = CTC - HRA - DA - PF - Tax
+        print(f"Monthly Cash in hand",(salary/12)* 100000)
+        print(f"The Total Annual Salary :",(salary*100000))
+        print(f"The All deductions :", (CTC - salary))
+    elif CTC > 20 and CTC <=24:
+        Tax = ((CTC - 20) * 0.25) + 4 * 0.05 + 4 * 0.1 + 4 * 0.15 + 4 * 0.2
+        salary = CTC - HRA - DA - PF - Tax
+        print(f"Monthly Cash in hand",(salary/12)* 100000)
+        print(f"The Total Annual Salary :",(salary*100000))
+        print(f"The All deductions :", (CTC - salary))
+    else:
+        Tax = ((CTC - 24) * 0.3) + 4 * 0.05 + 4 * 0.1 + 4 * 0.15 + 4 * 0.2 + 4 * 0.25
+        salary = CTC - HRA - DA - PF - Tax
+        print(f"Monthly Cash in hand",(salary/12)* 100000)
+        print(f"The Total Annual Salary :",(salary*100000))
+        print(f"The All deductions :", (CTC - salary))

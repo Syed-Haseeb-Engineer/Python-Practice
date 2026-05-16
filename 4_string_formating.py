@@ -16,3 +16,27 @@ print("Modern Way:", modern_way)
 print(f"Next year, you will upgrade to Ubuntu {ubuntu_version + 2.0}")
 
 
+#%%
+#Program on factorial
+n = int(input("Enter the number for which you required factorial"))
+
+result = 0
+fact = 1
+
+for i in range(1,n+1):
+    fact = fact * i
+    #result = result + i/fact
+
+print(fact)
+# %%
+for i in range(1,5):
+    for j in range(1,5):
+        print(i,j)
+        
+# %%
+for i in range(1,5):
+    for j in range(1,i+1):
+        print("*", end = "")
+    
+    print("\n")
+# %%
