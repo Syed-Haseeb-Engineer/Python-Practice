@@ -15,6 +15,12 @@ print("Modern Way:", modern_way)
 # in f string we can perform operation inside curly braces
 print(f"Next year, you will upgrade to Ubuntu {ubuntu_version + 2.0}")
 
+#%%
+#Diffent types of string creation
+s= 'hello'
+s= "hello"
+s= '''hello'''
+s= """hello"""
 
 #%%
 #Program on factorial
