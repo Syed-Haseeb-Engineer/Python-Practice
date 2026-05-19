@@ -10,7 +10,7 @@
 
 
 
-while True:
+while is_running:
     CTC = int(input("Enter your CTC"))
     HRA = CTC * 0.1
     DA = CTC * 0.05
