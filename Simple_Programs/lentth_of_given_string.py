@@ -68,3 +68,11 @@ for i in s.split():
     l.append(i[0].upper() + i[1:].lower())
 print(l)
 # %%
+
+rows = int(input("Enter the number of rows"))
+for i in range(rows,0):
+    for j in range(i,0):
+        print(i)
+
+    print()
+# %%
