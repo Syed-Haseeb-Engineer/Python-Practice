@@ -134,6 +134,18 @@
 # print("Final Sum:", total_sum)
 
 
+# print("\n --- P9: The 7 and 5 Filter ----")
+# count = 0 
+# for i in range(2000, 3201):
+#     if(i % 7 == 0) and (i % 5 == 0):
+#         print(i,end=" ")
+#         count += 1
+
+#         if count % 15 == 0: 
+#             print()
+# print("\n")
+
+
 # print("\n--- P10. Numbers with all even digits (1000-3000) ---")
 # #prining all of them is too long we will print just first 5
 
@@ -155,6 +167,39 @@
 #             print("... (truncated)")
 #             break
 # print()
+
+# print("\n ---P11: Robot Movement ---")
+# print("Enter the number of steps the robot takes in each direction: ")
+# steps_up = int(input("UP: "))
+# steps_down = int(input("Down: "))
+# steps_left = int(input("Left: "))
+# steps_right = int(input("Right: "))
+
+# x_position = steps_right - steps_left
+# y_position = steps_up - steps_down
+
+# distance = (x_position ** 2 + y_position ** 2) ** 0.5
+
+# print("The robot's distance from the starting point is: ",int(distance))
+
+# print("--- P12: Prime Number Checker ---")
+# num = int(input("Enter a number to check if it is prime: "))
+
+# is_prime = True
+# if num <= 1:
+#     is_prime = False
+# else:
+#     limit = int(num ** 0.5) + 1
+
+#     for i in range(2,limit):
+#         if num % i == 0:
+#             is_prime = False
+#             break
+
+# if is_prime:
+#     print(num, "is a Prime number.")
+# else:
+#     print(num, "is Not a prime number.")
 
 # print("\n--- P13: Armstrong Numbers in Range ---")
 # lower = int(input("Enter lower range:"))
@@ -196,3 +241,23 @@
 # #Floor it by converting to int
 # print("Angle:", int(final_angle))
 
+print("\n ---P15: Rectangle Overlap ---")
+print("Enter Rectangle 1 (Top-Left and Bottom-Right):")
+l1_x = float(input("L1 X: "))
+l1_y = float(input("L1 Y: "))
+r1_x = float(input("R1 X: "))
+r1_y = float(input("R1 y: "))
+
+print("Enter Rectangle 2 (Top-Left Bottom-Right")
+l2_x = float(input("L2 X: "))
+l2_y = float(input("L2 Y: "))
+r2_x = float(input("R2 X: "))
+r2_y = float(input("R2 Y:"))
+
+is_left = (r1_x < l2_x) or (r2_x < l1_x)
+is_above = (r1_y < l2_y) or (r2_y < l1_y)
+
+if is_above == True and is_left == True:
+    print("Rectanlge Not Overlap")
+else:
+    print("Rectangles Overlap")
