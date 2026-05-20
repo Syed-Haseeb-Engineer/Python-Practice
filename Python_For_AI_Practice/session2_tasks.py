@@ -85,24 +85,24 @@
 # print("Final Sum:", total_sum)
 
 
-print("\n--- P10. Numbers with all even digits (1000-3000) ---")
-#prining all of them is too long we will print just first 5
+# print("\n--- P10. Numbers with all even digits (1000-3000) ---")
+# #prining all of them is too long we will print just first 5
 
-count = 0
-for i in range(1000, 3001):
-    temp = i
-    all_even = True
-    while temp > 0:
-        digit = temp % 10
-        if digit % 2 !=0:
-            all_even = False
-            break
-        temp = temp // 10
+# count = 0
+# for i in range(1000, 3001):
+#     temp = i
+#     all_even = True
+#     while temp > 0:
+#         digit = temp % 10
+#         if digit % 2 !=0:
+#             all_even = False
+#             break
+#         temp = temp // 10
 
-    if all_even:
-        print(i,end=" ")
-        count = count + 1
-        if count == 5:
-            print("... (truncated)")
-            break
-print()
+#     if all_even:
+#         print(i,end=" ")
+#         count = count + 1
+#         if count == 5:
+#             print("... (truncated)")
+#             break
+# print()
