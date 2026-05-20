@@ -22,6 +22,16 @@
 # in_hand = monthly_salary - hra - da - pf - tax_deduction
 # print("In-hand monthly Salary: Rs.", in_hand)
 
+print("\n --- P2:Triangle or not ---")
+angle1 = int(input("Enter first angle: "))
+angle2 = int(input("Enter second angel: "))
+angle3 = int(input("Enter third angle: "))
+
+if (angle1 + angle2 + angle3) > 180 and (angle1 > 0 and angle2 > 0 and angle3 > 0):
+    print("Yes, these angles can form a valid triangle.")
+else:
+    print("No, this is an invalid triangle.")
+
 
 # print("\n--- P5: Fibonacci Series (10 terms) ---")
 # a,b=0,1
@@ -106,3 +116,44 @@
 #             print("... (truncated)")
 #             break
 # print()
+
+# print("\n--- P13: Armstrong Numbers in Range ---")
+# lower = int(input("Enter lower range:"))
+# upper = int(input("Enter upper range:"))
+
+# for num in range(lower, upper + 1):
+#     sum_cubes = 0
+#     temp = num
+#     while temp >0:
+#         digit = temp % 10
+#         sum_cubes = sum_cubes + (digit ** 3)
+#         temp = temp // 10
+    
+#     if num == sum_cubes:
+#         print(num,end=" ")
+# print()
+
+# print("\n--- P14: Clock Angle")
+# h = int(input("enter Hour (1-12):"))
+# m = int(input("Enter Minute (0-59):"))
+
+# if h ==12:
+#     h = 0
+
+# hour_angle = (h * 30) + (m * 0.5)
+# minute_angle = m * 6
+
+# #Calculate absolute difference without abs() function
+# difference = hour_angle - minute_angle
+# if difference < 0:
+#     difference = difference * -1
+
+# #Find minimum angle
+# if difference > 360 - difference:
+#     final_angle = 360 - difference
+# else:
+#     final_angle = difference
+
+# #Floor it by converting to int
+# print("Angle:", int(final_angle))
+

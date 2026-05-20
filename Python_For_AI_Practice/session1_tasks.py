@@ -117,4 +117,3 @@
 # total_glasses = int(tank_volume // glass_volume)
 # print(f"You can obtain {total_glasses} full glasses of milk.")
 
-
