@@ -22,15 +22,54 @@
 # in_hand = monthly_salary - hra - da - pf - tax_deduction
 # print("In-hand monthly Salary: Rs.", in_hand)
 
-print("\n --- P2:Triangle or not ---")
-angle1 = int(input("Enter first angle: "))
-angle2 = int(input("Enter second angel: "))
-angle3 = int(input("Enter third angle: "))
+# print("\n --- P2:Triangle or not ---")
+# angle1 = int(input("Enter first angle: "))
+# angle2 = int(input("Enter second angel: "))
+# angle3 = int(input("Enter third angle: "))
 
-if (angle1 + angle2 + angle3) > 180 and (angle1 > 0 and angle2 > 0 and angle3 > 0):
-    print("Yes, these angles can form a valid triangle.")
-else:
-    print("No, this is an invalid triangle.")
+# if (angle1 + angle2 + angle3) > 180 and (angle1 > 0 and angle2 > 0 and angle3 > 0):
+#     print("Yes, these angles can form a valid triangle.")
+# else:
+#     print("No, this is an invalid triangle.")
+
+# print("\n ---P3: profit and loss")
+# cp = int(input("Enter the cost price: "))
+# sp = int(input("Enter the selling price: "))
+
+# if sp > cp:
+#     print("Your in profit of",(sp-cp))
+# elif cp > sp:
+#     print("Your in loss of",(cp-sp))
+# else:
+#     print("Neither profit Neither loss")
+
+# print(" ---P4: Menu Driven converter ---")
+# while True:
+#     op = int(input("""
+#     How may i help you please enter
+#     1.cm to feet
+#     2.km to miles
+#     3.USD to INR
+#     4.exit
+#     """))
+
+#     if op == 1:
+#         cm = int(input("Enter cm: "))
+#         feet = cm * 0.0328084
+#         print("{} cm to {} feet".format(cm,feet))
+#     elif op == 2:
+#         km = int(input("Enter Kilometers: "))
+#         miles = km * 0.621371
+#         print("{} km to {} miles.".format(km,miles))
+#     elif op == 3:
+#         USD = int(input("Enter USD: "))
+#         INR = USD * 96.69
+#         print("{} USD to {} INR.".format(USD,INR))
+#     elif op == 4:
+#         print("Thank you. Existing ")
+#         break
+#     else:
+#         print("Invalid Option ")
 
 
 # print("\n--- P5: Fibonacci Series (10 terms) ---")
