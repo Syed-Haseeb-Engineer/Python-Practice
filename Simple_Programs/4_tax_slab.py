@@ -10,8 +10,8 @@
 
 
 
-while is_running:
-    CTC = int(input("Enter your CTC"))
+while True:
+    CTC = int(input("Enter your CTC or -1 to exit"))
     HRA = CTC * 0.1
     DA = CTC * 0.05
     PF = CTC * 0.03
@@ -19,7 +19,7 @@ while is_running:
     Tax = 0  
 
     
-    if CTC <= 4:
+    if CTC <= 4 and CTC > 0:
         Tax = CTC * 0
         salary = CTC - HRA - DA - PF - Tax
         print(f"Monthly Cash in hand",(salary/12)* 100000)
@@ -55,9 +55,12 @@ while is_running:
         print(f"Monthly Cash in hand",(salary/12)* 100000)
         print(f"The Total Annual Salary :",(salary*100000))
         print(f"The All deductions :", (CTC - salary))
-    else:
+    elif CTC > 24:
         Tax = ((CTC - 24) * 0.3) + 4 * 0.05 + 4 * 0.1 + 4 * 0.15 + 4 * 0.2 + 4 * 0.25
         salary = CTC - HRA - DA - PF - Tax
         print(f"Monthly Cash in hand",(salary/12)* 100000)
         print(f"The Total Annual Salary :",(salary*100000))
         print(f"The All deductions :", (CTC - salary))
+    else:
+        print("Invalid Option")
+        break
