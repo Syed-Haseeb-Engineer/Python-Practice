@@ -10,6 +10,26 @@ for i in range(1,6):
         print(j, end = " ")
     print()
 
+# # --- P6: Natural Logarithm Series ---
+# # Statement: Calculate the sum of the first 7 terms of the series: 
+# # (x-1)/x + (1/2)*((x-1)/x)^2 + (1/3)*((x-1)/x)^3 + ...
+# print("\n--- P6: Natural Log Approximation ---")
+# x = float(input("Enter value for x: "))
+
+# if x == 0:
+#     print("x cannot be zero (Division by Zero).")
+# else:
+#     total_sum = 0
+#     term_base = (x - 1) / x
+    
+#     for i in range(1, 8): # First 7 terms
+#         # Formula: (1/i) * (term_base ^ i)
+#         term_value = (1 / i) * (term_base ** i)
+#         total_sum = total_sum + term_value
+        
+#     print(f"The sum of the first 7 terms is: {total_sum}")
+
+
 print("\n--- P9: Decimal to Binary ---")
 decimal_num = int(input("Enter a decimal number: "))
 if decimal_num == 0:
@@ -19,7 +39,7 @@ else:
     temp = decimal_num
     while temp > 0:
         remainder = temp % 2
-        binary_str = str(remainder) + binary_str #How it performs the append as string is inmutuable
+        binary_str = str(remainder) + binary_str #Because string immutable it will create new string in every iteration
         temp = temp // 2
 print(decimal_num,"in binary is: ",binary_str)    
 
@@ -64,6 +84,8 @@ if count > 0:
 else:
     print("No digits found in the string.")
 
+
+print("\n ---P16: Symmentrical String ----")
 sym_str = input("Enter string to check symentry: ")
 str_mid = len(sym_str)//2
 
@@ -215,24 +237,6 @@ print(str_unique2)
 
 # print("=== Session 3: Completing the Missing String/List Tasks ===")
 
-# # --- P6: Natural Logarithm Series ---
-# # Statement: Calculate the sum of the first 7 terms of the series: 
-# # (x-1)/x + (1/2)*((x-1)/x)^2 + (1/3)*((x-1)/x)^3 + ...
-# print("\n--- P6: Natural Log Approximation ---")
-# x = float(input("Enter value for x: "))
-
-# if x == 0:
-#     print("x cannot be zero (Division by Zero).")
-# else:
-#     total_sum = 0
-#     term_base = (x - 1) / x
-    
-#     for i in range(1, 8): # First 7 terms
-#         # Formula: (1/i) * (term_base ^ i)
-#         term_value = (1 / i) * (term_base ** i)
-#         total_sum = total_sum + term_value
-        
-#     print(f"The sum of the first 7 terms is: {total_sum}")
 
 
 # # --- P7: Sum of series (2 + 22 + 222...) ---
