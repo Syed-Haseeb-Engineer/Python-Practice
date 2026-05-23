@@ -148,9 +148,19 @@
 # print(l)
 # print(r)
 
-# l = [1,2,3,4]
-l = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
-# Replace odd numbers with "Odd" and keep evens as-is
-transformed = ["Odd" if item % 2 != 0 else "Even" for block in l for row in block for item in row]
-print(transformed)
-# Output: ['Odd', 2, 'Odd', 4, 'Odd', 6, 'Odd', 8]
+# l = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+# # Replace odd numbers with "Odd" and keep evens as-is
+# transformed = ["Odd" if item % 2 != 0 else "Even" for block in l for row in block for item in row]
+# print(transformed)
+# # Output: ['Odd', 2, 'Odd', 4, 'Odd', 6, 'Odd', 8]
+
+# l = [4,3,2,4]
+# is_ascending = l== sorted(l)
+# is_descenging = l == sorted(l, reverse= True) 
+
+# if is_ascending:
+#     print("asceding",l)
+# elif is_descenging:
+#     print("descending",l)
+# else:
+#     print(l,"list is unordered")
