@@ -148,4 +148,9 @@
 # print(l)
 # print(r)
 
-l = [1,2,3,4]
+# l = [1,2,3,4]
+l = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+# Replace odd numbers with "Odd" and keep evens as-is
+transformed = ["Odd" if item % 2 != 0 else "Even" for block in l for row in block for item in row]
+print(transformed)
+# Output: ['Odd', 2, 'Odd', 4, 'Odd', 6, 'Odd', 8]
