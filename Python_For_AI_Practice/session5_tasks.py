@@ -136,3 +136,88 @@ print("=== Session 5: Tuples, Sets, Dictionaries ===")
 # # Sort the keys, and sort the list values!
 # d_sorted = {k: sorted(v) for k, v in sorted(d_unsorted.items())}
 # print("D5 Fully Sorted Dict:", d_sorted)
+
+# === SESSION 5: TUPLES, SETS, DICTS ===
+
+# --- TUPLES ---
+# T1: Join Tuples (CORRECTED: Pure Tuple/List logic, NO Dictionaries!)
+t_list = [(5, 6), (5, 7), (5, 8), (6, 10), (7, 13)]
+t_res = []
+for t in t_list:
+    if len(t_res) == 0:
+        t_res.append(t) # Add first tuple
+    elif t_res[-1][0] == t[0]:
+        # If the first element matches the previous tuple, concatenate the second element!
+        # [CONCEPT UNLOCKED: Tuple Concatenation via +]
+        t_res[-1] = t_res[-1] + (t[1],) 
+    else:
+        t_res.append(t)
+print("T1 Grouped:", t_res)
+
+# T2: Multiply adjacent
+t_orig = (1, 5, 7, 8, 10)
+t2_res = []
+for i in range(len(t_orig)):
+    left = t_orig[i-1] * t_orig[i] if i > 0 else 0
+    right = t_orig[i+1] * t_orig[i] if i < len(t_orig)-1 else 0
+    t2_res.append(left + right)
+print("T2 Adjacent Mult:", tuple(t2_res))
+
+# T3: Check if same
+t1, t2 = (1, 2, 3, 0), (0, 1, 2, 3)
+print("T3 Same?", t1 == t2)
+
+# T4: Count data types
+mixed = [('hi', 'bye'), {'a', 'b'}, ['hi', 'bye']]
+print("T4 Counts - Lists:", sum(1 for x in mixed if type(x) == list), 
+      "Sets:", sum(1 for x in mixed if type(x) == set), 
+      "Tuples:", sum(1 for x in mixed if type(x) == tuple))
+
+# --- SETS ---
+# S1: Common elements in 3 lists
+ar1, ar2, ar3 = [1,5,10,20], [6,7,20,100], [3,4,20,30]
+print("S1 Common:", list(set(ar1) & set(ar2) & set(ar3)))
+
+# S2: Unique Vowels
+s_str = "hands-on data science"
+vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
+print("S2 Unique Vowels:", len(set(c for c in s_str if c in vowels)))
+
+# S3: Binary String Check
+bin_str = "010101"
+print("S3 Is Binary?", set(bin_str) <= {'0', '1'})
+
+# S4: Union of n arrays
+arrays = [[1, 2, 4], [5, 1, 3], [9, 5, 7]]
+# [CONCEPT UNLOCKED: Unpacking * for sets]
+print("S4 Union:", list(set().union(*arrays)))
+
+# S5: Intersection via List Comp
+lst1, lst2 = [15, 9, 18], [9, 10, 4]
+print("S5 Intersection:", [x for x in lst1 if x in lst2])
+
+# --- DICTIONARIES ---
+# D1: Key with max unique values
+test_dict = {"CampusX": [5, 7, 7, 7], "is": [6, 7], "Best": [9, 9, 6, 5]}
+max_key = max(test_dict, key=lambda k: len(set(test_dict[k])))
+print("D1 Max Unique Key:", max_key)
+
+# D2: Replace words
+test_str = "CampusX best for DS students."
+repl = {"best": "is the best channel", "DS": "Data-Science"}
+print("D2 Replaced:", " ".join([repl.get(w, w) for w in test_str.split()]))
+
+# D3: Convert list to list of dicts
+t_list = ["DataScience", 3, "is", 8]
+k_list = ["name", "id"]
+# Iterate by the length of the key list (steps of 2)
+d3_res = [{k_list[0]: t_list[i], k_list[1]: t_list[i+1]} for i in range(0, len(t_list), 2)]
+print("D3 List of Dicts:", d3_res)
+
+# D4: Tuples to Dict
+tups = [("akash", 10), ("gaurav", 12)]
+print("D4 Tuple to Dict:", {k: [v] for k, v in tups})
+
+# D5: Sort Keys and Values
+d_un = {'c': [3, 1], 'b': [12, 10], 'a': [19, 4]}
+print("D5 Sorted:", {k: sorted(v) for k, v in sorted(d_un.items())})

@@ -104,3 +104,97 @@
 #         filter(lambda emp: emp['grade'] == 'highly-skilled', employees))
 # )
 # print("P15 Highly Skilled Output:", highly_skilled)
+
+from functools import reduce
+
+# === SESSION 6: FUNCTIONS ===
+
+# P1: Unique List
+def get_unique(lst): return list(set(lst))
+print("P1:", get_unique([1,2,3,3,4]))
+
+# P2: Hyphen Sort
+def sort_hyphen(s): return "-".join(sorted(s.split('-')))
+print("P2:", sort_hyphen("green-red-yellow-black-white"))
+
+# P3: Upper/Lower counter
+def case_count(s):
+    print(f"P3: Upper: {sum(1 for c in s if c.isupper())}, Lower: {sum(1 for c in s if c.islower())}")
+case_count("CampusX is Mentorship")
+
+# P4: Even filter
+print("P4:", list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6])))
+
+# P5: Perfect Number
+def is_perfect(n):
+    return n == sum(i for i in range(1, n) if n % i == 0)
+print("P5 Is 6 perfect?", is_perfect(6))
+
+# P6: Concat Dicts (*args)
+def concat_dicts(*args):
+    res = {}
+    for d in args: res.update(d)
+    return res
+print("P6:", concat_dicts({1:10}, {2:20}, {3:30}))
+
+# P7: Most Occurrence
+def most_freq(s):
+    words = s.split()
+    top = max(set(words), key=words.count)
+    return f"{top} -> {words.count(top)}"
+print("P7:", most_freq("hello how are you i am fine thank you"))
+
+# P8: Histogram Bin 10
+def histogram(lst):
+    # Math trick to find the bin range: (x-1)//10 * 10
+    bins = {}
+    for n in lst:
+        start = ((n-1)//10) * 10 + 1
+        end = start + 9
+        key = f"{start}-{end}"
+        bins[key] = bins.get(key, 0) + 1
+    return bins
+print("P8 Histogram:", histogram([13,42,15,37,22,39,41,50]))
+
+# P9: Closest Point
+def closest(points, query):
+    return min(points, key=lambda p: ((p[0]-query[0])**2 + (p[1]-query[1])**2))
+print("P9 Closest:", closest([(1,1), (2,2), (3,3)], (0,0)))
+
+# P10: Bag of Words (Built from scratch!)
+def bag_of_words(strings):
+    # 1. Build the total vocabulary
+    vocab = sorted(list(set(" ".join(strings).split())))
+    vectors = []
+    # 2. Count frequencies for each string
+    for s in strings:
+        words = s.split()
+        vectors.append([words.count(v) for v in vocab])
+    return {"vocab": vocab, "vectors": vectors}
+print("P10 BoW:", bag_of_words(["data science", "data analytics science"]))
+
+# P11: Add 3 lists with map/lambda
+print("P11 Map Add:", list(map(lambda x,y,z: x+y+z, [1,2], [3,4], [5,6])))
+
+# P12: Power to Index
+bases = [1, 2, 3, 4, 5, 6]
+print("P12 Powers:", list(map(lambda b, i: b**i, bases, range(len(bases)))))
+
+# P13: Filter Vowels
+print("P13 Vowels:", list(filter(lambda c: c.lower() in 'aeiou', "Hello World")))
+
+# P14: Reduce 2D to 1D
+mat2d = [[1, 2], [3, 4], [5, 6]]
+print("P14 Flatten:", reduce(lambda a, b: a + b, mat2d))
+
+# P15: Map/Filter/Reduce Employees
+employees = [
+    {'fname': 'Nitish', 'lname': 'Singh', 'grade': 'skilled'},
+    {'fname': 'Neha', 'lname': 'Singh', 'grade': 'highly-skilled'}
+]
+# Transcribing and cleaning up the screenshot logic!
+highly_skilled = list(
+    map(lambda x: x['fname'] + " " + x['lname'], 
+        filter(lambda x: x['grade'] == 'highly-skilled', employees))
+)
+print("P15 Highly Skilled:", highly_skilled)
