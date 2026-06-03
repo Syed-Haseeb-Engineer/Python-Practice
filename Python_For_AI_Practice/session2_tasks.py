@@ -70,6 +70,7 @@ while True:
         break
     else:
         print("Invalid Option ")
+        break
 
 
 print("\n--- P5: Fibonacci Series (10 terms) ---")
@@ -125,9 +126,9 @@ while current_num <= n_limit:
     
     if total_sum > 300:
         print("Sum exceeded 300. Stopping")
-        if total_sum == 303:
-            print(current_num)
-        break
+        # if total_sum == 303:
+        #     print(current_num)
+        # break
 
     current_num = current_num + 1
 
@@ -143,7 +144,6 @@ for i in range(2000, 3201):
 
         if count % 15 == 0: 
             print()
-print("\n") #why this is here?
 
 
 print("\n--- P10. Numbers with all even digits (1000-3000) ---")
