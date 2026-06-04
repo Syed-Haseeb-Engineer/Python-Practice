@@ -164,3 +164,48 @@
 #     print("descending",l)
 # else:
 #     print(l,"list is unordered")
+
+# l = [1,2,3,1]
+# l1 = [1,3,2,1]
+# print(l== l1)
+# print(list('hello'))
+# L = [2,1,5,7,0]
+# print(L)
+# print(id(L))
+# L1 = L.copy()
+# print(L1)
+# print(id(L1))
+
+# deep copy vs shallow copy 
+# why immutable datatypes have less space and time
+# and when we use del to delete string wheather it will permenantly deletes or just temporary. if temporary then why
+# difference between pop and del, and why in tuple and list pop remove last element and in sets it removes first element
+
+# import time
+# import sys
+# start = time.time()
+# L = []
+# for i in range(1,11):
+#     L.append(i)
+# print(L)
+# print(sys.getsizeof(L))
+# print(id(L))
+# print("time taken using loop", time.time()-start)
+
+# start = time.time()
+# L1 = [i for i in range(1,11)]
+# print(L1)
+# print(id(L1))
+# print(sys.getsizeof(L1))
+# print("time taken using comprehension", time.time()-start)
+
+
+# L1 = [1,2,3,4,5]
+# L2 = [-1,-2,-3,-4]
+# print(list(zip(L1,L2))).
+
+L = [1,2,3,4,5,6]
+l_odd = [i for i in range(len(L)+1) if i%2==0 ]
+l_even = [i for i in range(len(L)+1) if i%2 == 1]
+
+print(l_odd,l_even)

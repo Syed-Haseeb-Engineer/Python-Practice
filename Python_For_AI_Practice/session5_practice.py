@@ -93,4 +93,62 @@
 
 
 
+# a = [1,2,3]
+# b = a.copy()
+# a.append(4)
+# print(a)
+# print(b)
+# [1, 2, 3, 4]
+# [1, 2, 3, 4]
+
+# a = (1,2,3)
+# b = a
+# a = a + (4,)
+# print(a)
+# print(b)
+
+# s = {1,2,3,4,5}
+# s.push()
+# print(s)
+
+# s1 = {1,2,3,4,5}
+# s2 = {4,5,6,7,8}
+# # s1 | s2
+# print(s1.union(s2))
+# s1.update(s2)
+# print(s1)
+# print(s2)
+
+# s1 = {1,2,3,4,5}
+# s2 = {4,5,6,7,8}
+# print(s1.intersection(s2))
+# # s1.intersection_update(s2)
+# print(s1)
+# print(s2)
+
+
+# s1 = {1,2,3,4,5}
+# s2 = {3,4,5}
+# print(s1.issuperset(s2))
+# print(s2.issubset(s1))
+
+# s1 = {1,2,3}
+# s2 = s1.copy()
+# print(s1.add(5))
+# print(s1)
+# print(s2)
+
+# d5 = {'name':'nitish','name':'rahul'}
+# print(d5)
+
+# d6 = {'name':'nitish',(1,2,3):2}
+# print(d6)
+
+d = {'name': 'nitish', 'age': 32, 3: 3, 'gender': 'male', 'weight': 72}
+# pop
+print(d)
+d.pop(3)
+d.popitem()
+del d['age']
+print(d)
 
