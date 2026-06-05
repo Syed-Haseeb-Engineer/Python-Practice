@@ -67,10 +67,33 @@
 # print(L[-1](3))
 # print(L)
 
-def f():
-    def x(a, b):
-        return a+b
-    return x
+# def f():
+#     def x(a, b):
+#         return a+b
+#     return x
     
-val = f()(3,4)
-print(val)
+# val = f()(3,4)
+# print(val)
+
+# def cube(x):
+#     return x ** 3
+def transform(f,L):
+    output = []
+    for i in L:
+        output.append(f(i))
+    print(output)
+
+
+L = [1,2,3,4]
+transform(lambda x:x**2,L)
+
+# def transform(f,L):
+#   output = []
+#   for i in L:
+#     output.append(f(i))
+
+#   print(output)
+
+# L = [1,2,3,4,5]
+
+# transform(lambda x:x**3,L)
